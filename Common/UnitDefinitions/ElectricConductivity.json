@@ -51,6 +51,19 @@
           "Abbreviations": [ "S/ft" ]
         }
       ]
+    },
+    {
+      "SingularName": "SiemensPerCentimeter",
+      "PluralName": "SiemensPerCentimeter",
+      "FromUnitToBaseFunc": "x * 100",
+      "FromBaseToUnitFunc": "x / 100",
+      "Prefixes": [ "Micro", "Milli" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "S/cm" ]
+        }
+      ]
     }
   ]
 }

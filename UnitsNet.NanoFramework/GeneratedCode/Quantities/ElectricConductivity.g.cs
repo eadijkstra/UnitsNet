@@ -81,6 +81,21 @@ namespace UnitsNet
         #region Conversion Properties
 
         /// <summary>
+        ///     Get ElectricConductivity in MicrosiemensPerCentimeter.
+        /// </summary>
+        public double MicrosiemensPerCentimeter => As(ElectricConductivityUnit.MicrosiemensPerCentimeter);
+
+        /// <summary>
+        ///     Get ElectricConductivity in MillisiemensPerCentimeter.
+        /// </summary>
+        public double MillisiemensPerCentimeter => As(ElectricConductivityUnit.MillisiemensPerCentimeter);
+
+        /// <summary>
+        ///     Get ElectricConductivity in SiemensPerCentimeter.
+        /// </summary>
+        public double SiemensPerCentimeter => As(ElectricConductivityUnit.SiemensPerCentimeter);
+
+        /// <summary>
         ///     Get ElectricConductivity in SiemensPerFoot.
         /// </summary>
         public double SiemensPerFoot => As(ElectricConductivityUnit.SiemensPerFoot);
@@ -98,6 +113,24 @@ namespace UnitsNet
         #endregion
 
         #region Static Factory Methods
+
+        /// <summary>
+        ///     Get ElectricConductivity from MicrosiemensPerCentimeter.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static ElectricConductivity FromMicrosiemensPerCentimeter(double microsiemenspercentimeter) => new ElectricConductivity(microsiemenspercentimeter, ElectricConductivityUnit.MicrosiemensPerCentimeter);
+
+        /// <summary>
+        ///     Get ElectricConductivity from MillisiemensPerCentimeter.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static ElectricConductivity FromMillisiemensPerCentimeter(double millisiemenspercentimeter) => new ElectricConductivity(millisiemenspercentimeter, ElectricConductivityUnit.MillisiemensPerCentimeter);
+
+        /// <summary>
+        ///     Get ElectricConductivity from SiemensPerCentimeter.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static ElectricConductivity FromSiemensPerCentimeter(double siemenspercentimeter) => new ElectricConductivity(siemenspercentimeter, ElectricConductivityUnit.SiemensPerCentimeter);
 
         /// <summary>
         ///     Get ElectricConductivity from SiemensPerFoot.
@@ -160,6 +193,9 @@ namespace UnitsNet
         {
             switch(Unit)
             {
+                case ElectricConductivityUnit.MicrosiemensPerCentimeter: return (_value * 100) * 1e-6d;
+                case ElectricConductivityUnit.MillisiemensPerCentimeter: return (_value * 100) * 1e-3d;
+                case ElectricConductivityUnit.SiemensPerCentimeter: return _value * 100;
                 case ElectricConductivityUnit.SiemensPerFoot: return _value * 3.2808398950131234;
                 case ElectricConductivityUnit.SiemensPerInch: return _value * 3.937007874015748e1;
                 case ElectricConductivityUnit.SiemensPerMeter: return _value;
@@ -177,6 +213,9 @@ namespace UnitsNet
 
             switch(unit)
             {
+                case ElectricConductivityUnit.MicrosiemensPerCentimeter: return (baseUnitValue / 100) / 1e-6d;
+                case ElectricConductivityUnit.MillisiemensPerCentimeter: return (baseUnitValue / 100) / 1e-3d;
+                case ElectricConductivityUnit.SiemensPerCentimeter: return baseUnitValue / 100;
                 case ElectricConductivityUnit.SiemensPerFoot: return baseUnitValue / 3.2808398950131234;
                 case ElectricConductivityUnit.SiemensPerInch: return baseUnitValue / 3.937007874015748e1;
                 case ElectricConductivityUnit.SiemensPerMeter: return baseUnitValue;

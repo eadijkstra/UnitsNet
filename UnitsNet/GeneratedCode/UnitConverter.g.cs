@@ -390,6 +390,12 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<ElectricConductance>(ElectricConductance.BaseUnit, ElectricConductanceUnit.Millisiemens, q => q.ToUnit(ElectricConductanceUnit.Millisiemens));
             unitConverter.SetConversionFunction<ElectricConductance>(ElectricConductanceUnit.Millisiemens, ElectricConductance.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<ElectricConductance>(ElectricConductance.BaseUnit, ElectricConductance.BaseUnit, q => q);
+            unitConverter.SetConversionFunction<ElectricConductivity>(ElectricConductivity.BaseUnit, ElectricConductivityUnit.MicrosiemensPerCentimeter, q => q.ToUnit(ElectricConductivityUnit.MicrosiemensPerCentimeter));
+            unitConverter.SetConversionFunction<ElectricConductivity>(ElectricConductivityUnit.MicrosiemensPerCentimeter, ElectricConductivity.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<ElectricConductivity>(ElectricConductivity.BaseUnit, ElectricConductivityUnit.MillisiemensPerCentimeter, q => q.ToUnit(ElectricConductivityUnit.MillisiemensPerCentimeter));
+            unitConverter.SetConversionFunction<ElectricConductivity>(ElectricConductivityUnit.MillisiemensPerCentimeter, ElectricConductivity.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<ElectricConductivity>(ElectricConductivity.BaseUnit, ElectricConductivityUnit.SiemensPerCentimeter, q => q.ToUnit(ElectricConductivityUnit.SiemensPerCentimeter));
+            unitConverter.SetConversionFunction<ElectricConductivity>(ElectricConductivityUnit.SiemensPerCentimeter, ElectricConductivity.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<ElectricConductivity>(ElectricConductivity.BaseUnit, ElectricConductivityUnit.SiemensPerFoot, q => q.ToUnit(ElectricConductivityUnit.SiemensPerFoot));
             unitConverter.SetConversionFunction<ElectricConductivity>(ElectricConductivityUnit.SiemensPerFoot, ElectricConductivity.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<ElectricConductivity>(ElectricConductivity.BaseUnit, ElectricConductivityUnit.SiemensPerInch, q => q.ToUnit(ElectricConductivityUnit.SiemensPerInch));

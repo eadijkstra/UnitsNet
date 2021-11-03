@@ -59,6 +59,9 @@ namespace UnitsNet
 
             Info = new QuantityInfo<ElectricConductivityUnit>("ElectricConductivity",
                 new UnitInfo<ElectricConductivityUnit>[] {
+                    new UnitInfo<ElectricConductivityUnit>(ElectricConductivityUnit.MicrosiemensPerCentimeter, "MicrosiemensPerCentimeter", BaseUnits.Undefined),
+                    new UnitInfo<ElectricConductivityUnit>(ElectricConductivityUnit.MillisiemensPerCentimeter, "MillisiemensPerCentimeter", BaseUnits.Undefined),
+                    new UnitInfo<ElectricConductivityUnit>(ElectricConductivityUnit.SiemensPerCentimeter, "SiemensPerCentimeter", BaseUnits.Undefined),
                     new UnitInfo<ElectricConductivityUnit>(ElectricConductivityUnit.SiemensPerFoot, "SiemensPerFoot", BaseUnits.Undefined),
                     new UnitInfo<ElectricConductivityUnit>(ElectricConductivityUnit.SiemensPerInch, "SiemensPerInch", BaseUnits.Undefined),
                     new UnitInfo<ElectricConductivityUnit>(ElectricConductivityUnit.SiemensPerMeter, "SiemensPerMeter", new BaseUnits(length: LengthUnit.Meter, mass: MassUnit.Kilogram, time: DurationUnit.Second, current: ElectricCurrentUnit.Ampere)),
@@ -178,6 +181,21 @@ namespace UnitsNet
         #region Conversion Properties
 
         /// <summary>
+        ///     Get ElectricConductivity in MicrosiemensPerCentimeter.
+        /// </summary>
+        public double MicrosiemensPerCentimeter => As(ElectricConductivityUnit.MicrosiemensPerCentimeter);
+
+        /// <summary>
+        ///     Get ElectricConductivity in MillisiemensPerCentimeter.
+        /// </summary>
+        public double MillisiemensPerCentimeter => As(ElectricConductivityUnit.MillisiemensPerCentimeter);
+
+        /// <summary>
+        ///     Get ElectricConductivity in SiemensPerCentimeter.
+        /// </summary>
+        public double SiemensPerCentimeter => As(ElectricConductivityUnit.SiemensPerCentimeter);
+
+        /// <summary>
         ///     Get ElectricConductivity in SiemensPerFoot.
         /// </summary>
         public double SiemensPerFoot => As(ElectricConductivityUnit.SiemensPerFoot);
@@ -221,6 +239,33 @@ namespace UnitsNet
 
         #region Static Factory Methods
 
+        /// <summary>
+        ///     Get ElectricConductivity from MicrosiemensPerCentimeter.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static ElectricConductivity FromMicrosiemensPerCentimeter(QuantityValue microsiemenspercentimeter)
+        {
+            double value = (double) microsiemenspercentimeter;
+            return new ElectricConductivity(value, ElectricConductivityUnit.MicrosiemensPerCentimeter);
+        }
+        /// <summary>
+        ///     Get ElectricConductivity from MillisiemensPerCentimeter.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static ElectricConductivity FromMillisiemensPerCentimeter(QuantityValue millisiemenspercentimeter)
+        {
+            double value = (double) millisiemenspercentimeter;
+            return new ElectricConductivity(value, ElectricConductivityUnit.MillisiemensPerCentimeter);
+        }
+        /// <summary>
+        ///     Get ElectricConductivity from SiemensPerCentimeter.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        public static ElectricConductivity FromSiemensPerCentimeter(QuantityValue siemenspercentimeter)
+        {
+            double value = (double) siemenspercentimeter;
+            return new ElectricConductivity(value, ElectricConductivityUnit.SiemensPerCentimeter);
+        }
         /// <summary>
         ///     Get ElectricConductivity from SiemensPerFoot.
         /// </summary>
@@ -677,6 +722,9 @@ namespace UnitsNet
         {
             switch(Unit)
             {
+                case ElectricConductivityUnit.MicrosiemensPerCentimeter: return (_value * 100) * 1e-6d;
+                case ElectricConductivityUnit.MillisiemensPerCentimeter: return (_value * 100) * 1e-3d;
+                case ElectricConductivityUnit.SiemensPerCentimeter: return _value * 100;
                 case ElectricConductivityUnit.SiemensPerFoot: return _value * 3.2808398950131234;
                 case ElectricConductivityUnit.SiemensPerInch: return _value * 3.937007874015748e1;
                 case ElectricConductivityUnit.SiemensPerMeter: return _value;
@@ -705,6 +753,9 @@ namespace UnitsNet
 
             switch(unit)
             {
+                case ElectricConductivityUnit.MicrosiemensPerCentimeter: return (baseUnitValue / 100) / 1e-6d;
+                case ElectricConductivityUnit.MillisiemensPerCentimeter: return (baseUnitValue / 100) / 1e-3d;
+                case ElectricConductivityUnit.SiemensPerCentimeter: return baseUnitValue / 100;
                 case ElectricConductivityUnit.SiemensPerFoot: return baseUnitValue / 3.2808398950131234;
                 case ElectricConductivityUnit.SiemensPerInch: return baseUnitValue / 3.937007874015748e1;
                 case ElectricConductivityUnit.SiemensPerMeter: return baseUnitValue;
