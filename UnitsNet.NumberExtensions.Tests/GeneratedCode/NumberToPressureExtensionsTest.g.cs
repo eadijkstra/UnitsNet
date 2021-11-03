@@ -37,6 +37,10 @@ namespace UnitsNet.Tests
             Assert.Equal(Pressure.FromCentibars(2), 2.Centibars());
 
         [Fact]
+        public void NumberToCentimetersOfWaterConventionalTest() =>
+            Assert.Equal(Pressure.FromCentimetersOfWaterConventional(2), 2.CentimetersOfWaterConventional());
+
+        [Fact]
         public void NumberToDecapascalsTest() =>
             Assert.Equal(Pressure.FromDecapascals(2), 2.Decapascals());
 
@@ -57,6 +61,10 @@ namespace UnitsNet.Tests
             Assert.Equal(Pressure.FromFeetOfHead(2), 2.FeetOfHead());
 
         [Fact]
+        public void NumberToFeetOfWaterConventionalTest() =>
+            Assert.Equal(Pressure.FromFeetOfWaterConventional(2), 2.FeetOfWaterConventional());
+
+        [Fact]
         public void NumberToGigapascalsTest() =>
             Assert.Equal(Pressure.FromGigapascals(2), 2.Gigapascals());
 
@@ -71,6 +79,10 @@ namespace UnitsNet.Tests
         [Fact]
         public void NumberToInchesOfWaterColumnTest() =>
             Assert.Equal(Pressure.FromInchesOfWaterColumn(2), 2.InchesOfWaterColumn());
+
+        [Fact]
+        public void NumberToInchesOfWaterConventionalTest() =>
+            Assert.Equal(Pressure.FromInchesOfWaterConventional(2), 2.InchesOfWaterConventional());
 
         [Fact]
         public void NumberToKilobarsTest() =>
@@ -133,6 +145,10 @@ namespace UnitsNet.Tests
             Assert.Equal(Pressure.FromMetersOfHead(2), 2.MetersOfHead());
 
         [Fact]
+        public void NumberToMetersOfWaterConventionalTest() =>
+            Assert.Equal(Pressure.FromMetersOfWaterConventional(2), 2.MetersOfWaterConventional());
+
+        [Fact]
         public void NumberToMicrobarsTest() =>
             Assert.Equal(Pressure.FromMicrobars(2), 2.Microbars());
 
@@ -147,6 +163,10 @@ namespace UnitsNet.Tests
         [Fact]
         public void NumberToMillimetersOfMercuryTest() =>
             Assert.Equal(Pressure.FromMillimetersOfMercury(2), 2.MillimetersOfMercury());
+
+        [Fact]
+        public void NumberToMillimetersOfWaterConventionalTest() =>
+            Assert.Equal(Pressure.FromMillimetersOfWaterConventional(2), 2.MillimetersOfWaterConventional());
 
         [Fact]
         public void NumberToMillipascalsTest() =>

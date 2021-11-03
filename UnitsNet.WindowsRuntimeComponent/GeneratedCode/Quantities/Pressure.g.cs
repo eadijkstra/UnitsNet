@@ -171,6 +171,11 @@ namespace UnitsNet
         public double Centibars => As(PressureUnit.Centibar);
 
         /// <summary>
+        ///     Get Pressure in CentimetersOfWaterConventional.
+        /// </summary>
+        public double CentimetersOfWaterConventional => As(PressureUnit.CentimeterOfWaterConventional);
+
+        /// <summary>
         ///     Get Pressure in Decapascals.
         /// </summary>
         public double Decapascals => As(PressureUnit.Decapascal);
@@ -196,6 +201,11 @@ namespace UnitsNet
         public double FeetOfHead => As(PressureUnit.FootOfHead);
 
         /// <summary>
+        ///     Get Pressure in FeetOfWaterConventional.
+        /// </summary>
+        public double FeetOfWaterConventional => As(PressureUnit.FootOfWaterConventional);
+
+        /// <summary>
         ///     Get Pressure in Gigapascals.
         /// </summary>
         public double Gigapascals => As(PressureUnit.Gigapascal);
@@ -214,6 +224,11 @@ namespace UnitsNet
         ///     Get Pressure in InchesOfWaterColumn.
         /// </summary>
         public double InchesOfWaterColumn => As(PressureUnit.InchOfWaterColumn);
+
+        /// <summary>
+        ///     Get Pressure in InchesOfWaterConventional.
+        /// </summary>
+        public double InchesOfWaterConventional => As(PressureUnit.InchOfWaterConventional);
 
         /// <summary>
         ///     Get Pressure in Kilobars.
@@ -291,6 +306,11 @@ namespace UnitsNet
         public double MetersOfHead => As(PressureUnit.MeterOfHead);
 
         /// <summary>
+        ///     Get Pressure in MetersOfWaterConventional.
+        /// </summary>
+        public double MetersOfWaterConventional => As(PressureUnit.MeterOfWaterConventional);
+
+        /// <summary>
         ///     Get Pressure in Microbars.
         /// </summary>
         public double Microbars => As(PressureUnit.Microbar);
@@ -309,6 +329,11 @@ namespace UnitsNet
         ///     Get Pressure in MillimetersOfMercury.
         /// </summary>
         public double MillimetersOfMercury => As(PressureUnit.MillimeterOfMercury);
+
+        /// <summary>
+        ///     Get Pressure in MillimetersOfWaterConventional.
+        /// </summary>
+        public double MillimetersOfWaterConventional => As(PressureUnit.MillimeterOfWaterConventional);
 
         /// <summary>
         ///     Get Pressure in Millipascals.
@@ -436,6 +461,16 @@ namespace UnitsNet
             return new Pressure(value, PressureUnit.Centibar);
         }
         /// <summary>
+        ///     Get Pressure from CentimetersOfWaterConventional.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Pressure FromCentimetersOfWaterConventional(double centimetersofwaterconventional)
+        {
+            double value = (double) centimetersofwaterconventional;
+            return new Pressure(value, PressureUnit.CentimeterOfWaterConventional);
+        }
+        /// <summary>
         ///     Get Pressure from Decapascals.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
@@ -486,6 +521,16 @@ namespace UnitsNet
             return new Pressure(value, PressureUnit.FootOfHead);
         }
         /// <summary>
+        ///     Get Pressure from FeetOfWaterConventional.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Pressure FromFeetOfWaterConventional(double feetofwaterconventional)
+        {
+            double value = (double) feetofwaterconventional;
+            return new Pressure(value, PressureUnit.FootOfWaterConventional);
+        }
+        /// <summary>
         ///     Get Pressure from Gigapascals.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
@@ -524,6 +569,16 @@ namespace UnitsNet
         {
             double value = (double) inchesofwatercolumn;
             return new Pressure(value, PressureUnit.InchOfWaterColumn);
+        }
+        /// <summary>
+        ///     Get Pressure from InchesOfWaterConventional.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Pressure FromInchesOfWaterConventional(double inchesofwaterconventional)
+        {
+            double value = (double) inchesofwaterconventional;
+            return new Pressure(value, PressureUnit.InchOfWaterConventional);
         }
         /// <summary>
         ///     Get Pressure from Kilobars.
@@ -676,6 +731,16 @@ namespace UnitsNet
             return new Pressure(value, PressureUnit.MeterOfHead);
         }
         /// <summary>
+        ///     Get Pressure from MetersOfWaterConventional.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Pressure FromMetersOfWaterConventional(double metersofwaterconventional)
+        {
+            double value = (double) metersofwaterconventional;
+            return new Pressure(value, PressureUnit.MeterOfWaterConventional);
+        }
+        /// <summary>
         ///     Get Pressure from Microbars.
         /// </summary>
         /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
@@ -714,6 +779,16 @@ namespace UnitsNet
         {
             double value = (double) millimetersofmercury;
             return new Pressure(value, PressureUnit.MillimeterOfMercury);
+        }
+        /// <summary>
+        ///     Get Pressure from MillimetersOfWaterConventional.
+        /// </summary>
+        /// <exception cref="ArgumentException">If value is NaN or Infinity.</exception>
+        [Windows.Foundation.Metadata.DefaultOverload]
+        public static Pressure FromMillimetersOfWaterConventional(double millimetersofwaterconventional)
+        {
+            double value = (double) millimetersofwaterconventional;
+            return new Pressure(value, PressureUnit.MillimeterOfWaterConventional);
         }
         /// <summary>
         ///     Get Pressure from Millipascals.
@@ -1139,15 +1214,18 @@ namespace UnitsNet
                 case PressureUnit.Atmosphere: return _value*1.01325*1e5;
                 case PressureUnit.Bar: return _value*1e5;
                 case PressureUnit.Centibar: return (_value*1e5) * 1e-2d;
+                case PressureUnit.CentimeterOfWaterConventional: return (_value*9806.65) * 1e-2d;
                 case PressureUnit.Decapascal: return (_value) * 1e1d;
                 case PressureUnit.Decibar: return (_value*1e5) * 1e-1d;
                 case PressureUnit.DynePerSquareCentimeter: return _value*1.0e-1;
                 case PressureUnit.FootOfElevation: return Math.Pow(1.0 - (_value / 145366.45), 5.2553026003237266401799415610351) * 101325.0;
                 case PressureUnit.FootOfHead: return _value*2989.0669;
+                case PressureUnit.FootOfWaterConventional: return _value*2989.06692;
                 case PressureUnit.Gigapascal: return (_value) * 1e9d;
                 case PressureUnit.Hectopascal: return (_value) * 1e2d;
                 case PressureUnit.InchOfMercury: return _value/2.95299830714159e-4;
                 case PressureUnit.InchOfWaterColumn: return _value*249.08890833333;
+                case PressureUnit.InchOfWaterConventional: return _value*249.08891;
                 case PressureUnit.Kilobar: return (_value*1e5) * 1e3d;
                 case PressureUnit.KilogramForcePerSquareCentimeter: return _value*9.80665e4;
                 case PressureUnit.KilogramForcePerSquareMeter: return _value*9.80665019960652;
@@ -1163,10 +1241,12 @@ namespace UnitsNet
                 case PressureUnit.Megapascal: return (_value) * 1e6d;
                 case PressureUnit.MeterOfElevation: return Math.Pow(1.0 - (_value / 44307.69396), 5.2553026003237266401799415610351) * 101325.0;
                 case PressureUnit.MeterOfHead: return _value*9804.139432;
+                case PressureUnit.MeterOfWaterConventional: return _value*9806.65;
                 case PressureUnit.Microbar: return (_value*1e5) * 1e-6d;
                 case PressureUnit.Micropascal: return (_value) * 1e-6d;
                 case PressureUnit.Millibar: return (_value*1e5) * 1e-3d;
                 case PressureUnit.MillimeterOfMercury: return _value/7.50061561302643e-3;
+                case PressureUnit.MillimeterOfWaterConventional: return (_value*9806.65) * 1e-3d;
                 case PressureUnit.Millipascal: return (_value) * 1e-3d;
                 case PressureUnit.NewtonPerSquareCentimeter: return _value*1e4;
                 case PressureUnit.NewtonPerSquareMeter: return _value;
@@ -1197,15 +1277,18 @@ namespace UnitsNet
                 case PressureUnit.Atmosphere: return baseUnitValue/(1.01325*1e5);
                 case PressureUnit.Bar: return baseUnitValue/1e5;
                 case PressureUnit.Centibar: return (baseUnitValue/1e5) / 1e-2d;
+                case PressureUnit.CentimeterOfWaterConventional: return (baseUnitValue/9806.65) / 1e-2d;
                 case PressureUnit.Decapascal: return (baseUnitValue) / 1e1d;
                 case PressureUnit.Decibar: return (baseUnitValue/1e5) / 1e-1d;
                 case PressureUnit.DynePerSquareCentimeter: return baseUnitValue/1.0e-1;
                 case PressureUnit.FootOfElevation: return (1.0 - Math.Pow(baseUnitValue / 101325.0, 0.190284)) * 145366.45;
                 case PressureUnit.FootOfHead: return baseUnitValue*0.000334552565551;
+                case PressureUnit.FootOfWaterConventional: return baseUnitValue/2989.06692;
                 case PressureUnit.Gigapascal: return (baseUnitValue) / 1e9d;
                 case PressureUnit.Hectopascal: return (baseUnitValue) / 1e2d;
                 case PressureUnit.InchOfMercury: return baseUnitValue*2.95299830714159e-4;
                 case PressureUnit.InchOfWaterColumn: return baseUnitValue/249.08890833333;
+                case PressureUnit.InchOfWaterConventional: return baseUnitValue/249.08891;
                 case PressureUnit.Kilobar: return (baseUnitValue/1e5) / 1e3d;
                 case PressureUnit.KilogramForcePerSquareCentimeter: return baseUnitValue/9.80665e4;
                 case PressureUnit.KilogramForcePerSquareMeter: return baseUnitValue*0.101971619222242;
@@ -1221,10 +1304,12 @@ namespace UnitsNet
                 case PressureUnit.Megapascal: return (baseUnitValue) / 1e6d;
                 case PressureUnit.MeterOfElevation: return (1.0 - Math.Pow(baseUnitValue / 101325.0, 0.190284)) * 44307.69396;
                 case PressureUnit.MeterOfHead: return baseUnitValue*0.0001019977334;
+                case PressureUnit.MeterOfWaterConventional: return baseUnitValue/9806.65;
                 case PressureUnit.Microbar: return (baseUnitValue/1e5) / 1e-6d;
                 case PressureUnit.Micropascal: return (baseUnitValue) / 1e-6d;
                 case PressureUnit.Millibar: return (baseUnitValue/1e5) / 1e-3d;
                 case PressureUnit.MillimeterOfMercury: return baseUnitValue*7.50061561302643e-3;
+                case PressureUnit.MillimeterOfWaterConventional: return (baseUnitValue/9806.65) / 1e-3d;
                 case PressureUnit.Millipascal: return (baseUnitValue) / 1e-3d;
                 case PressureUnit.NewtonPerSquareCentimeter: return baseUnitValue/1e4;
                 case PressureUnit.NewtonPerSquareMeter: return baseUnitValue;

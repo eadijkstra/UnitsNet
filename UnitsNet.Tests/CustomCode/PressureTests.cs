@@ -98,6 +98,16 @@ namespace UnitsNet.Tests.CustomCode
 
         protected override double FeetOfElevationInOnePascal => 129149.976945763;
 
+        protected override double InchesOfWaterConventionalInOnePascal => 4.0146307597556230022e-3;
+
+        protected override double FeetOfWaterConventionalInOnePascal => 3.3455256331296858352e-4;
+
+        protected override double MetersOfWaterConventionalInOnePascal => 1.01971621297792824257e-4;
+
+        protected override double CentimetersOfWaterConventionalInOnePascal => 1.01971621297792824257e-2;
+
+        protected override double MillimetersOfWaterConventionalInOnePascal => 1.01971621297792824257e-1;
+
         [Fact]
         public void Absolute_WithAbsolutePressureReference_IsEqual()
         {

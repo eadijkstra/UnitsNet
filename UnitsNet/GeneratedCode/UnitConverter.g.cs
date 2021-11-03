@@ -1657,6 +1657,8 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.Bar, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.Centibar, q => q.ToUnit(PressureUnit.Centibar));
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.Centibar, Pressure.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.CentimeterOfWaterConventional, q => q.ToUnit(PressureUnit.CentimeterOfWaterConventional));
+            unitConverter.SetConversionFunction<Pressure>(PressureUnit.CentimeterOfWaterConventional, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.Decapascal, q => q.ToUnit(PressureUnit.Decapascal));
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.Decapascal, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.Decibar, q => q.ToUnit(PressureUnit.Decibar));
@@ -1667,6 +1669,8 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.FootOfElevation, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.FootOfHead, q => q.ToUnit(PressureUnit.FootOfHead));
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.FootOfHead, Pressure.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.FootOfWaterConventional, q => q.ToUnit(PressureUnit.FootOfWaterConventional));
+            unitConverter.SetConversionFunction<Pressure>(PressureUnit.FootOfWaterConventional, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.Gigapascal, q => q.ToUnit(PressureUnit.Gigapascal));
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.Gigapascal, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.Hectopascal, q => q.ToUnit(PressureUnit.Hectopascal));
@@ -1675,6 +1679,8 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.InchOfMercury, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.InchOfWaterColumn, q => q.ToUnit(PressureUnit.InchOfWaterColumn));
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.InchOfWaterColumn, Pressure.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.InchOfWaterConventional, q => q.ToUnit(PressureUnit.InchOfWaterConventional));
+            unitConverter.SetConversionFunction<Pressure>(PressureUnit.InchOfWaterConventional, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.Kilobar, q => q.ToUnit(PressureUnit.Kilobar));
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.Kilobar, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.KilogramForcePerSquareCentimeter, q => q.ToUnit(PressureUnit.KilogramForcePerSquareCentimeter));
@@ -1705,6 +1711,8 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.MeterOfElevation, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.MeterOfHead, q => q.ToUnit(PressureUnit.MeterOfHead));
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.MeterOfHead, Pressure.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.MeterOfWaterConventional, q => q.ToUnit(PressureUnit.MeterOfWaterConventional));
+            unitConverter.SetConversionFunction<Pressure>(PressureUnit.MeterOfWaterConventional, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.Microbar, q => q.ToUnit(PressureUnit.Microbar));
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.Microbar, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.Micropascal, q => q.ToUnit(PressureUnit.Micropascal));
@@ -1713,6 +1721,8 @@ namespace UnitsNet
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.Millibar, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.MillimeterOfMercury, q => q.ToUnit(PressureUnit.MillimeterOfMercury));
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.MillimeterOfMercury, Pressure.BaseUnit, q => q.ToBaseUnit());
+            unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.MillimeterOfWaterConventional, q => q.ToUnit(PressureUnit.MillimeterOfWaterConventional));
+            unitConverter.SetConversionFunction<Pressure>(PressureUnit.MillimeterOfWaterConventional, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.Millipascal, q => q.ToUnit(PressureUnit.Millipascal));
             unitConverter.SetConversionFunction<Pressure>(PressureUnit.Millipascal, Pressure.BaseUnit, q => q.ToBaseUnit());
             unitConverter.SetConversionFunction<Pressure>(Pressure.BaseUnit, PressureUnit.NewtonPerSquareCentimeter, q => q.ToUnit(PressureUnit.NewtonPerSquareCentimeter));

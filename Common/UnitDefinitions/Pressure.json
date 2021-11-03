@@ -204,12 +204,12 @@
         {
           "Culture": "en-US",
           "Abbreviations": [ "psi", "lb/in²" ],
-          "AbbreviationsForPrefixes": { "Kilo": [ "ksi", "kipf/in²" ]}
+          "AbbreviationsForPrefixes": { "Kilo": [ "ksi", "kipf/in²" ] }
         },
         {
           "Culture": "ru-RU",
           "Abbreviations": [ "psi", "lb/in²" ],
-          "AbbreviationsForPrefixes": { "Kilo": [ "ksi", "kipf/in²" ]}
+          "AbbreviationsForPrefixes": { "Kilo": [ "ksi", "kipf/in²" ] }
         }
       ]
     },
@@ -372,6 +372,43 @@
         {
           "Culture": "en-US",
           "Abbreviations": [ "ft of elevation" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "MeterOfWaterConventional",
+      "PluralName": "MetersOfWaterConventional",
+      "FromUnitToBaseFunc": "x*9806.65",
+      "FromBaseToUnitFunc": "x/9806.65",
+      "Prefixes": [ "Milli", "Centi" ],
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "mH2O" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "FootOfWaterConventional",
+      "PluralName": "FeetOfWaterConventional",
+      "FromUnitToBaseFunc": "x*2989.06692",
+      "FromBaseToUnitFunc": "x/2989.06692",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "ftH2O" ]
+        }
+      ]
+    },
+    {
+      "SingularName": "InchOfWaterConventional",
+      "PluralName": "InchesOfWaterConventional",
+      "FromUnitToBaseFunc": "x*249.08891",
+      "FromBaseToUnitFunc": "x/249.08891",
+      "Localization": [
+        {
+          "Culture": "en-US",
+          "Abbreviations": [ "inH2O" ]
         }
       ]
     }
